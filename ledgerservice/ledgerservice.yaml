@@ -19,7 +19,6 @@ metadata:
   namespace: bank
 spec:
   replicas: 1
-  serviceName: ledgerservice
   selector:
     matchLabels:
       app: ledgerservice
