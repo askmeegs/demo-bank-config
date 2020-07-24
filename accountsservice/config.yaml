@@ -27,9 +27,9 @@ metadata:
   name: service-api-config
   namespace: bank
 data:
-  TRANSACTIONS_API_ADDR: "ledgerwriter:8080" #ledgerwriter 
-  BALANCES_API_ADDR: "balancereader:8080"  #balancereader
-  HISTORY_API_ADDR: "transactionhistory:8080" #transactionhistory
+  TRANSACTIONS_API_ADDR: "ledgerservice:8082" #ledgerwriter 
+  BALANCES_API_ADDR: "ledgerservice:8081"  #balancereader
+  HISTORY_API_ADDR: "ledgerservice:8080" #transactionhistory
   CONTACTS_API_ADDR: "accountsservice:8080"
   USERSERVICE_API_ADDR: "userservice-java:8080"
 ---
