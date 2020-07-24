@@ -1,1 +1,1 @@
-# demo-bank-config
+# acme-finance-config
