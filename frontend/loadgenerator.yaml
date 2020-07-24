@@ -48,3 +48,17 @@ spec:
           limits:
             cpu: 500m
             memory: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadgenerator
+  namespace: bank
+spec:
+  type: ClusterIP
+  selector:
+    app: loadgenerator
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
