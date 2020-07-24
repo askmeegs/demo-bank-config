@@ -7,7 +7,7 @@ steps:
     - "./accountsservice"
   env:
     - "CLOUDSDK_CORE_PROJECT=${PROJECT_ID}"
-    - "CLOUDSDK_COMPUTE_REGION=us-central1-c"
+    - "CLOUDSDK_COMPUTE_REGION=us-east1-d"
     - "CLOUDSDK_CONTAINER_CLUSTER=prod"
 - name: "gcr.io/cloud-builders/kubectl"
   id: 'Deploy Ledger Service'
@@ -17,7 +17,7 @@ steps:
     - "./ledgerservice"
   env:
     - "CLOUDSDK_CORE_PROJECT=${PROJECT_ID}"
-    - "CLOUDSDK_COMPUTE_REGION=us-central1-c"
+    - "CLOUDSDK_COMPUTE_REGION=us-east1-d"
     - "CLOUDSDK_CONTAINER_CLUSTER=prod"
 - name: "gcr.io/cloud-builders/kubectl"
   id: 'Deploy Java User Service'
@@ -27,7 +27,7 @@ steps:
     - "./userservice-java"
   env:
     - "CLOUDSDK_CORE_PROJECT=${PROJECT_ID}"
-    - "CLOUDSDK_COMPUTE_REGION=us-central1-c"
+    - "CLOUDSDK_COMPUTE_REGION=us-east1-d"
     - "CLOUDSDK_CONTAINER_CLUSTER=prod"
 - name: "gcr.io/cloud-builders/kubectl"
   id: 'Deploy Frontend'
@@ -37,5 +37,5 @@ steps:
     - "./frontend"
   env:
     - "CLOUDSDK_CORE_PROJECT=${PROJECT_ID}"
-    - "CLOUDSDK_COMPUTE_REGION=us-central1-c"
+    - "CLOUDSDK_COMPUTE_REGION=us-east1-d"
     - "CLOUDSDK_CONTAINER_CLUSTER=prod"
