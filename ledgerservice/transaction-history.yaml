@@ -16,6 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: transactionhistory
+  namespace: bank
 spec:
   selector:
     matchLabels:
@@ -25,6 +26,7 @@ spec:
       labels:
         app: transactionhistory
     spec:
+      serviceAccountName: bank-ksa
       terminationGracePeriodSeconds: 5
       containers:
       - name: transactionhistory

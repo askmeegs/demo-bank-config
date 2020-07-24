@@ -16,6 +16,7 @@ kind: StatefulSet
 apiVersion: apps/v1
 metadata:
   name: ledger-db
+  namespace: bank
 spec:
   serviceName: "ledger-db"
   replicas: 1
@@ -27,6 +28,7 @@ spec:
       labels:
         app: ledger-db
     spec:
+      serviceAccountName: bank-ksa
       containers:
         - name: postgres
           image: gcr.io/next20-onair-hands-on-keynote/ledger-db:latest
