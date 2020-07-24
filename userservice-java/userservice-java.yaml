@@ -74,7 +74,7 @@ metadata:
   name: userservice-java
   namespace: bank
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: userservice-java
   ports:
