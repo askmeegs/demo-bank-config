@@ -30,7 +30,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
         - name: userservice-java
-          image: gcr.io/next20-onair-hands-on-keynote/userservice-java@sha256:18526fe7a079a9cd1b803b7888c5003c528ed8a167d818126dfd8c2bd84b1ea4
+          image: gcr.io/next20-onair-hands-on-keynote/userservice-java@sha256:101ffdf21e67d68376a1da0d5b44ce426e1ee4b460499d2c9adaf4f7ad12531f
           ports:
             - name: http-server
               containerPort: 8080
